@@ -5,6 +5,7 @@ from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram.utils.markdown import hbold
+from aiogram.client.default import DefaultBotProperties
 from dotenv import load_dotenv
 
 # Загружаем переменные из .env файла
@@ -20,8 +21,8 @@ if not BOT_TOKEN:
 # Включаем логирование
 logging.basicConfig(level=logging.INFO)
 
-# Создаем объекты бота и диспетчера
-bot = Bot(token=BOT_TOKEN, parse_mode=ParseMode.HTML)
+# Создаем объекты бота и диспетчера с новым синтаксисом
+bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
 # Обработчик команды /start
