@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебные задания</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="profile-page" class="page">
+            <div class="header">
+                <h1>Профиль</h1>
+            </div>
+            <div class="profile-content">
+                <div class="user-info">
+                    <p><strong>Имя:</strong> <span id="user-name">Загрузка...</span></p>
+                    <p><strong>Ключи:</strong> <span id="keys-count">0</span>/7</p>
+                </div>
+                <button id="go-to-tasks" class="btn primary">Перейти к заданиям</button>
+            </div>
+        </div>
+
+        <div id="tasks-page" class="page hidden">
+            <div class="header">
+                <h1>Задания</h1>
+                <button id="back-to-profile" class="btn back-btn">←</button>
+            </div>
+            <div class="tasks-list" id="tasks-list">
+                <!-- Задания будут добавляться через JS -->
+            </div>
+        </div>
+
+        <div id="task-detail-page" class="page hidden">
+            <div class="header">
+                <h1 id="task-month">Задание</h1>
+                <button id="back-to-tasks" class="btn back-btn">←</button>
+            </div>
+            <div class="task-content">
+                <div class="timer" id="timer">Осталось: 10:00</div>
+                <div id="task-questions">
+                    <!-- Вопросы будут добавляться через JS -->
+                </div>
+                <div class="task-actions">
+                    <button id="prev-question" class="btn secondary">Назад</button>
+                    <button id="finish-task" class="btn primary">Завершить</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="congrats-page" class="page hidden">
+            <div class="congrats-content">
+                <h1>Поздравляем! 🎉</h1>
+                <p>Вы собрали все 7 ключей!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
